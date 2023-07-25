@@ -33,6 +33,11 @@ public class StudentServiceImpl implements StudentService {
     }
 
     @Override
+    public Student findByPassword(String password) {
+        return studentRepository.findByPassword(password);
+    }
+
+    @Override
     public List<Student> findAllByOrderByGpaDesc() {
         return studentRepository.findAllByOrderByGpaDesc();
     }

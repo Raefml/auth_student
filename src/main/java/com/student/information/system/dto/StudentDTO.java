@@ -12,19 +12,22 @@ public class StudentDTO {
     private long studentNumber;
     private String email;
     private List<String> courseList;
+
+    private String password;
     private float gpa;
 
     public StudentDTO() {
     }
 
     public StudentDTO(String id, String name, long studentNumber, String email,
-                      List<String> courseList, float gpa) {
+                      List<String> courseList, float gpa,String password) {
         this.id = id;
         this.name = name;
         this.studentNumber = studentNumber;
         this.email = email;
         this.courseList = courseList;
         this.gpa = gpa;
+        this.password=password;
     }
 
     public String getId() {
@@ -75,4 +78,11 @@ public class StudentDTO {
         this.gpa = gpa;
     }
 
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
 }

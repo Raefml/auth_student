@@ -15,6 +15,10 @@ public interface StudentService {
 
     Student findByEmail(String email);
 
+
+    Student findByPassword(String password);
+
+
     List<Student> findAllByOrderByGpaDesc();
 
     Student saveOrUpdateStudent(Student student);

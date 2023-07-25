@@ -31,7 +31,7 @@ public class StudentRestController {
         return ObjectMapperUtils.map(studentService.findByStudentNumber(studentNumber), StudentDTO.class);
     }
 
-    @GetMapping(value = "/byEmail/{email}")
+    @GetMapping(value = "/login/{email}")
     public StudentDTO getStudentByEmail(@PathVariable("email") String email) {
         return ObjectMapperUtils.map(studentService.findByEmail(email), StudentDTO.class);
     }

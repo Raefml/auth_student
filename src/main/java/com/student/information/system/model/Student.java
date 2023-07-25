@@ -15,18 +15,20 @@ public class Student {
     private String name;
     private long studentNumber;
     private String email;
+    private String password;
     private List<String> courseList;
     private float gpa;
 
     public Student() {
     }
 
-    public Student(String name, long studentNumber, String email, List<String> courseList, float gpa) {
+    public Student(String name, long studentNumber, String email, List<String> courseList, float gpa,String password) {
         this.name = name;
         this.studentNumber = studentNumber;
         this.email = email;
         this.courseList = courseList;
         this.gpa = gpa;
+        this.password=password;
     }
 
     public String getId() {
@@ -87,5 +89,13 @@ public class Student {
                 ", courseList=" + courseList +
                 ", gpa=" + gpa +
                 '}';
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 }
